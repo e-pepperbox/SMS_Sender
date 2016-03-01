@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="my.app.smssender.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="153dp"
+        android:layout_height="wrap_content"
+        android:text="Phones load: 0"
+        android:id="@+id/txt_PhoneLoad" />
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="38dp"
+        android:text="Load phones"
+        android:id="@+id/btn_LoadPhones"
+        android:textSize="15dp"
+        android:layout_below="@+id/txt_PhoneLoad"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/txt_PhoneLoad" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Message"
+        android:id="@+id/txt_Message"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/txt_SendStatus"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/etxt_Message"
+        android:layout_weight="0.16"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/btn_RunSend"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="249dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Send status"
+        android:id="@+id/txt_SendStatus"
+        android:layout_below="@+id/btn_LoadPhones"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run send"
+        android:id="@+id/btn_RunSend"
+        android:textSize="15dp"
+        android:layout_weight="0.02"
+        android:layout_below="@+id/txt_Message"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear send"
+        android:id="@+id/btn_Clear"
+        android:textSize="15dp"
+        android:layout_weight="0.02"
+        android:layout_alignTop="@+id/btn_RunSend"
+        android:layout_toEndOf="@+id/btn_RunSend"
+        android:layout_above="@+id/etxt_Message" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Log"
+        android:id="@+id/txtLog"
+        android:layout_below="@+id/etxt_Message"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/etxt_Message"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="58dp" >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/etxt_Log" />
+    </ScrollView>
+
+</RelativeLayout>
